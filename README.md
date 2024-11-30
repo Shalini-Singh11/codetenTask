@@ -1,6 +1,7 @@
 # codetenTask
 
-## Getting Started
+## Deployed
+The live version is deployed and accessible at: [https://visionary-manatee-2ec067.netlify.app/].
 
 ### Prerequisites
 - [Node.js](https://nodejs.org/) (v14 or higher)
