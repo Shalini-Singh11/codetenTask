@@ -1,0 +1,376 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
+.content-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+.scrollable-content {
+  overflow-y: auto;
+  padding: 15%;
+  flex: 1;
+  height: 100%;
+  position: relative;
+}
+.main-bg-color {
+  background-color: #d6a642;
+}
+.main-content-color {
+  color: #d6a642;
+}
+
+/* =========navbar================== */
+.navbar {
+  height: 60px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.trapezoid-navbar {
+  top: 0;
+  rotate: 180deg;
+  --p: 95px;
+  height: 115px;
+  aspect-ratio: 10 / 2;
+  position: absolute;
+  left: 30%;
+  border-top-left-radius: 191px;
+  border-bottom: 122px solid #d6a642;
+  border-left: 111px solid transparent;
+  border-right: 111px solid transparent;
+  width: 35%;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 26px;
+}
+.navbar-brand img {
+  width: 4%;
+  margin-right: 1%;
+}
+.navbar-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  rotate: 180deg;
+  padding-bottom: 2%;
+  gap: 2%;
+}
+
+.navbar-icons i {
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 30px;
+  color: black;
+  position: relative;
+}
+
+.navbar-icons i:hover,
+.navbar-menu-img:hover {
+  color: white;
+}
+/* .navbar-icon-img {
+  position: relative;
+} */
+.navbar-menu-img {
+  width: 135%;
+  margin-right: 2%;
+}
+.popover {
+  inset: 0px 0px auto 0px !important;
+  position: relative;
+}
+.react-tooltip {
+  font-family: "Montserrat", serif;
+}
+/* ====navbar for mobile======== */
+.navbar-menu{
+  background-color: #d4a53d;
+  padding: 10px;
+  rotate: 180deg;
+}
+
+/* ================left right sidebar==================== */
+.right-sidebar,
+.left-sidebar {
+  height: calc(100vh - 60px);
+  position: fixed;
+  top: 60px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.right-sidebar {
+  width: 100px;
+  right: 0;
+  background-color: #d4a53d;
+}
+
+.left-sidebar {
+  width: 50px;
+  left: 0;
+}
+.right-sidebar-content {
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 60px;
+  background-color: #d4a53d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 1px solid black;
+}
+
+.wallet-icon {
+  font-size: 35px;
+  color: black;
+  background-color: #ca9800;
+  padding: 2% 20%;
+}
+
+.sidebar-item {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  font-size: 16px;
+  font-weight: 600;
+  color: black;
+  text-align: center;
+  margin: 20px 0;
+  cursor: pointer;
+}
+.sidebar-item:hover,
+.wallet-icon:hover {
+  color: #fff;
+}
+.divider {
+  width: 60%;
+  border: 0;
+  border-top: 2px solid black;
+  margin: 10px auto;
+}
+
+/* =============footer================= */
+.footer {
+  height: 40px;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+.footer-content {
+  /* z-index: 999; */
+}
+.trapezoid {
+  bottom: 0;
+  --p: 126px;
+  height: 95px;
+  aspect-ratio: 13 / 2;
+  left: 0%;
+  position: relative;
+}
+.trapezoid-another {
+  bottom: 0;
+  --p: 84px;
+  height: 122px;
+  aspect-ratio: 16 / 2;
+  position: absolute;
+  left: 17%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: transparent;
+  -webkit-perspective: 130px;
+  perspective: 130px;
+  margin: 0;
+}
+
+.trapezoid-another::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  border: 3px solid #d6a642;
+  -webkit-transform: rotateX(20deg) rotateY(0deg);
+  transform: rotateX(20deg) rotateY(0deg);
+}
+.trapezoid {
+  clip-path: polygon(var(--p) 0, calc(100% - var(--p)) 0, 100% 100%, 0 100%);
+  background: #d6a642;
+}
+.left-traingle{
+  border-top: 50px solid transparent;
+  border-right: 100px solid #d6a642;
+  border-bottom: 50px solid transparent;
+  position: absolute;
+  bottom: 0;
+  rotate: 200deg;
+}
+.right-traingle{
+  border-top: 75px solid transparent;
+  border-right: 145px solid #d6a642;
+  border-bottom: 83px solid transparent;
+  position: absolute;
+  bottom: 0;
+  rotate: 100deg;
+  right: 0;
+}
+
+/* ===================main content================ */
+
+.section-down-icon {
+  color: #d6a642;
+  font-size: 38px;
+  cursor: pointer;
+}
+
+#first-section {
+  padding-bottom: 18%;
+}
+
+#second-section {
+  padding-bottom: 18%;
+  padding-top: 22%;
+}
+
+/*================= third section============ */
+
+.contact-us-button {
+  background-color: transparent;
+  color: #d4a53d;
+  width: 60%;
+}
+
+/* ==================  Slider-image-change ========================= */
+.slider-container {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease, filter 1s ease;
+  filter: blur(5px);
+}
+
+.slider-image.active {
+  opacity: 1 !important;
+  filter: blur(0px);
+}
+
+/* ==================  carousel ========================= */
+
+.slide img {
+  width: 12rem;
+  margin: 0 auto;
+  transition: transform 300ms;
+  border: 2px solid #d4a53d;
+  padding: 1%;
+}
+
+.slide {
+  transition: transform 300ms, opacity 300ms;
+}
+.scale-1 {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.scale-06 {
+  transform: scale(0.7);
+  opacity: 0.8;
+}
+
+.scale-03 {
+  transform: scale(0.6);
+  opacity: 0.5;
+}
+.title {
+  text-align: center;
+  color: #d4a53d;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.next {
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.prev {
+  left: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 769px) {
+ .footer-content{
+  display: none;
+ }
+}
+
+@media screen and (max-width: 800px) {
+  .carousel-app {
+    padding: 20px;
+  }
+  .left-sidebar,
+  .trapezoid-navbar,
+  .trapezoid-another {
+    display: none;
+  }
+
+  .slider-container {
+    width: 250px;
+    height: 250px;
+  }
+  .left-traingle, .right-traingle{
+    display: none;
+  }
+  .right-sidebar {
+    right: -250px;
+  }
+ .first-section{
+  margin-top: 5%;
+ }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel-app .title p {
+    font-size: 12px;
+  }
+}
